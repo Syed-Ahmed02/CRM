@@ -1,6 +1,7 @@
 import { Geist_Mono, Inter, Nunito_Sans } from "next/font/google"
 
 import "./globals.css"
+import { ClerkProvider } from "@clerk/nextjs"
 import { ConvexClientProvider } from "@/components/convex-client-provider"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
@@ -34,9 +35,11 @@ export default function RootLayout({
       )}
     >
       <body>
-        <ConvexClientProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </ConvexClientProvider>
+        <ClerkProvider>
+          <ConvexClientProvider>
+            <ThemeProvider>{children}</ThemeProvider>
+          </ConvexClientProvider>
+        </ClerkProvider>
       </body>
     </html>
   )
