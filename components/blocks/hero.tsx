@@ -8,9 +8,9 @@ import { AnimatedGroup } from '@/components/ui/animated-group'
 import { InfiniteSlider } from '@/components/ui/infinite-slider'
 import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { cn } from '@/lib/utils'
-import { useScroll } from 'motion/react'
+import { type Variants, useScroll } from 'motion/react'
 
-const transitionVariants = {
+const transitionVariants: { item: Variants } = {
     item: {
         hidden: {
             opacity: 0,

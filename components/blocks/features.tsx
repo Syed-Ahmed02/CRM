@@ -1,11 +1,11 @@
 'use client'
 
 import { useRef } from 'react'
-import { motion, useInView } from 'motion/react'
+import { motion, type Variants, useInView } from 'motion/react'
 import { RiGlobalLine, RiUserSearchLine, RiLinkM, RiCalendarLine, RiBrainLine, RiTeamLine } from '@remixicon/react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 
-const fadeUp = {
+const fadeUp: Variants = {
     hidden: { opacity: 0, y: 24, filter: 'blur(8px)' },
     visible: {
         opacity: 1,
@@ -15,7 +15,7 @@ const fadeUp = {
     },
 }
 
-const stagger = {
+const stagger: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.1, delayChildren: 0.15 } },
 }
