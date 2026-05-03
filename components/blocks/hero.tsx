@@ -2,9 +2,11 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { RiArrowRightSLine, RiMenuLine, RiCloseLine } from '@remixicon/react'
+import { RiMenuLine, RiCloseLine } from '@remixicon/react'
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
+import { InfiniteSlider } from '@/components/ui/infinite-slider'
+import { ProgressiveBlur } from '@/components/ui/progressive-blur'
 import { cn } from '@/lib/utils'
 import { useScroll } from 'motion/react'
 
@@ -120,89 +122,37 @@ export function HeroSection() {
                     </div>
                 </section>
                 <section className="bg-background pb-16 pt-16 md:pb-32">
-                    <div className="group relative m-auto max-w-5xl px-6">
-                        <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-                            <Link
-                                href="/"
-                                className="block text-sm duration-150 hover:opacity-75">
-                                <span> Meet Our Customers</span>
-
-                                <RiArrowRightSLine className="ml-1 inline-block size-3" />
-                            </Link>
-                        </div>
-                        <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/nvidia.svg"
-                                    alt="Nvidia Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/column.svg"
-                                    alt="Column Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/github.svg"
-                                    alt="GitHub Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/nike.svg"
-                                    alt="Nike Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-5 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
-                                    alt="Lemon Squeezy Logo"
-                                    height="20"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-4 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/laravel.svg"
-                                    alt="Laravel Logo"
-                                    height="16"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-7 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/lilly.svg"
-                                    alt="Lilly Logo"
-                                    height="28"
-                                    width="auto"
-                                />
-                            </div>
-                            <div className="flex">
-                                <img
-                                    className="mx-auto h-6 w-fit dark:invert"
-                                    src="https://html.tailus.io/blocks/customers/openai.svg"
-                                    alt="OpenAI Logo"
-                                    height="24"
-                                    width="auto"
-                                />
-                            </div>
+                    <div className="mx-auto max-w-5xl px-6">
+                        <p className="text-muted-foreground mb-6 text-center text-sm">Trusted by teams at</p>
+                        <div className="relative h-[80px] w-full overflow-hidden">
+                            <InfiniteSlider
+                                className="flex h-full w-full items-center"
+                                duration={30}
+                                gap={48}
+                            >
+                                {logoItems.map((logo) => (
+                                    <div
+                                        key={logo.id}
+                                        className="flex w-32 items-center justify-center"
+                                    >
+                                        <img
+                                            src={logo.image}
+                                            alt={logo.description}
+                                            className={logo.className}
+                                        />
+                                    </div>
+                                ))}
+                            </InfiniteSlider>
+                            <ProgressiveBlur
+                                className="pointer-events-none absolute top-0 left-0 h-full w-[200px]"
+                                direction="left"
+                                blurIntensity={1}
+                            />
+                            <ProgressiveBlur
+                                className="pointer-events-none absolute top-0 right-0 h-full w-[200px]"
+                                direction="right"
+                                blurIntensity={1}
+                            />
                         </div>
                     </div>
                 </section>
@@ -210,6 +160,45 @@ export function HeroSection() {
         </>
     )
 }
+
+const logoItems = [
+    {
+        id: 'logo-1',
+        description: 'Figma',
+        image: 'https://www.shadcnblocks.com/images/block/logos/figma.svg',
+        className: 'h-7 w-auto dark:invert',
+    },
+    {
+        id: 'logo-2',
+        description: 'Next.js',
+        image: 'https://www.shadcnblocks.com/images/block/logos/nextjs.svg',
+        className: 'h-7 w-auto dark:invert',
+    },
+    {
+        id: 'logo-3',
+        description: 'Supabase',
+        image: 'https://www.shadcnblocks.com/images/block/logos/supabase.svg',
+        className: 'h-7 w-auto',
+    },
+    {
+        id: 'logo-4',
+        description: 'Vercel',
+        image: 'https://www.shadcnblocks.com/images/block/logos/vercel.svg',
+        className: 'h-7 w-auto dark:invert',
+    },
+    {
+        id: 'logo-5',
+        description: 'GitHub',
+        image: 'https://html.tailus.io/blocks/customers/github.svg',
+        className: 'h-6 w-auto dark:invert',
+    },
+    {
+        id: 'logo-6',
+        description: 'OpenAI',
+        image: 'https://html.tailus.io/blocks/customers/openai.svg',
+        className: 'h-6 w-auto dark:invert',
+    },
+]
 
 const menuItems = [
     { name: 'Features', href: '#link' },

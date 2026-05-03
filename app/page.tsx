@@ -1,5 +1,11 @@
-import { HeroSection } from "@/components/blocks/hero-section-2"
+import { HeroSection } from "@/components/blocks/hero"
+import { FeatureSection } from "@/components/blocks/features"
 
 export default function Page() {
-  return <HeroSection />
+  return (
+    <>
+      <HeroSection />
+      <FeatureSection />
+    </>
+  )
 }
