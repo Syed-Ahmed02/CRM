@@ -66,7 +66,7 @@ export function HeroSection() {
                                             key={1}
                                             className="bg-foreground/10 rounded-[14px] border p-0.5">
                                             <Button
-                                                render={<Link href="#link" />}
+                                                render={<Link href="/sign-up" />}
                                                 size="lg"
                                                 className="rounded-xl px-5 text-base">
                                                 <span className="text-nowrap">Start Building</span>
@@ -274,13 +274,13 @@ export const HeroHeader = () => {
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                                 <Button
-                                    render={<Link href="#" />}
+                                    render={<Link href="/sign-in" />}
                                     variant="outline"
                                     size="sm">
                                     <span>Login</span>
                                 </Button>
                                 <Button
-                                    render={<Link href="#" />}
+                                    render={<Link href="/sign-up" />}
                                     size="sm">
                                     <span>Sign Up</span>
                                 </Button>

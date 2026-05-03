@@ -15,7 +15,7 @@ export function CTASection() {
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button
-            render={<Link href="#" />}
+            render={<Link href="/sign-up" />}
             size="lg"
             className="gap-2"
           >
