@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar"
+import { DashboardKanbanBoard } from "@/components/dashboard/kanban-board"
 import {
   SidebarInset,
   SidebarProvider,
@@ -38,52 +39,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-[1.3fr_0.7fr]">
-            <section className="rounded-xl border bg-card p-6 shadow-sm">
-              <div className="flex items-center justify-between gap-3">
-                <div>
-                  <h2 className="font-heading text-xl font-semibold">
-                    Priority deals
-                  </h2>
-                  <p className="text-sm text-muted-foreground">
-                    Typical CRM records placeholder data for now.
-                  </p>
-                </div>
-              </div>
-              <div className="mt-5 divide-y">
-                {["Acme renewal", "Ridgeway onboarding", "Juniper pilot"].map(
-                  (deal) => (
-                    <div
-                      key={deal}
-                      className="flex items-center justify-between gap-4 py-3"
-                    >
-                      <span className="font-medium">{deal}</span>
-                      <span className="text-sm text-muted-foreground">
-                        In progress
-                      </span>
-                    </div>
-                  )
-                )}
-              </div>
-            </section>
-            <section className="rounded-xl border bg-card p-6 shadow-sm">
-              <h2 className="font-heading text-xl font-semibold">
-                Project queue
-              </h2>
-              <div className="mt-5 space-y-3">
-                {["Website launch", "Sales enablement", "Customer health"].map(
-                  (project) => (
-                    <div
-                      key={project}
-                      className="rounded-lg border bg-background px-4 py-3 text-sm font-medium"
-                    >
-                      {project}
-                    </div>
-                  )
-                )}
-              </div>
-            </section>
-          </div>
+          <DashboardKanbanBoard />
         </main>
       </SidebarInset>
     </SidebarProvider>
