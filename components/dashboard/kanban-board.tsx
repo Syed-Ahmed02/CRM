@@ -299,7 +299,7 @@ export function DashboardKanbanBoard() {
         </div>
       </section>
 
-      <Sheet open={Boolean(activeCard)} onOpenChange={(open) => !open && setActiveCard(null)}>
+      <Sheet open={Boolean(activeCard)} onOpenChange={(open: boolean) => !open && setActiveCard(null)}>
         <SheetContent className="sm:max-w-md">
           {activeCard ? (
             <>
