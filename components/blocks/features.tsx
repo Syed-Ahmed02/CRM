@@ -25,7 +25,7 @@ export function FeatureSection() {
     const inView = useInView(ref, { once: true, margin: '-80px' })
 
     return (
-        <section className="dark:bg-muted/25 bg-zinc-50 py-16 md:py-32">
+        <section className="bg-muted/40 py-16 md:py-32 dark:bg-muted/25">
             <div className="mx-auto max-w-5xl px-6">
                 <motion.div
                     ref={ref}
@@ -48,7 +48,7 @@ export function FeatureSection() {
 
                             <div className="relative h-fit pl-6 md:pl-12">
                                 <div className="absolute -inset-6 [background:radial-gradient(75%_95%_at_50%_0%,transparent,hsl(var(--background))_100%)]"></div>
-                                <div className="bg-background overflow-hidden rounded-tl-lg border-l border-t pl-2 pt-2 dark:bg-zinc-950">
+                                <div className="bg-background overflow-hidden rounded-tl-lg border-l border-t pl-2 pt-2 dark:bg-card">
                                     <img
                                         src="https://tailark.com/_next/image?url=%2Fmail2.png&w=3840&q=75"
                                         className="hidden dark:block"
@@ -70,7 +70,7 @@ export function FeatureSection() {
 
                     {/* Top-right card */}
                     <motion.div variants={fadeUp} className="sm:col-span-2">
-                        <Card className="group overflow-hidden shadow-zinc-950/5 sm:rounded-none sm:rounded-tr-xl h-full">
+                        <Card className="group h-full overflow-hidden shadow-wuslah-walnut/5 sm:rounded-none sm:rounded-tr-xl">
                             <p className="mx-auto my-6 max-w-md text-balance px-6 text-center text-lg font-semibold sm:text-2xl md:p-6">
                                 Discover the right people. Build meaningful connections.
                             </p>

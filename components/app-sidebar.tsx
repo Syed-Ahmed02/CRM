@@ -15,6 +15,7 @@ import {
   RiTeamLine,
 } from "@remixicon/react"
 
+import { WuslahMark } from "@/components/brand/wuslah-logo"
 import {
   Sidebar,
   SidebarContent,
@@ -94,17 +95,17 @@ export function AppSidebar() {
               render={<Link href="/dashboard" />}
               size="lg"
               className="gap-3"
-              tooltip="Northstar CRM"
+              tooltip="Wuslah"
             >
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-sidebar-primary font-heading text-sm font-bold text-sidebar-primary-foreground">
-                N
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-sidebar-primary text-sidebar-primary-foreground">
+                <WuslahMark className="size-5" variant="inverse" />
               </span>
               <span className="flex min-w-0 flex-col">
-                <span className="truncate font-heading font-semibold">
-                  Northstar CRM
+                <span className="truncate font-heading text-base">
+                  Wuslah
                 </span>
                 <span className="truncate text-xs text-sidebar-foreground/60">
-                  Sales workspace
+                  the thread you keep
                 </span>
               </span>
             </SidebarMenuButton>
