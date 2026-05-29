@@ -1,9 +1,7 @@
-import { createRequire } from 'module'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
-const require = createRequire(import.meta.url)
 const projectRoot = fs.realpathSync.native(
   path.dirname(fileURLToPath(import.meta.url)),
 )
@@ -12,9 +10,6 @@ const projectRoot = fs.realpathSync.native(
 const nextConfig = {
   turbopack: {
     root: projectRoot,
-    resolveAlias: {
-      '@clerk/nextjs/server': require.resolve('@clerk/nextjs/server'),
-    },
   },
   outputFileTracingRoot: projectRoot,
   images: {
