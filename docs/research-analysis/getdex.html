@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dex Competitor Research Analysis</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18201d;
+      --muted: #5d6b65;
+      --line: #d9e1dc;
+      --paper: #fbfbf7;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --accent-soft: #e1f3ef;
+      --warning: #8a5a00;
+      --warning-soft: #fff2cc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 72px;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 28px;
+      margin-bottom: 28px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 4.6rem);
+      max-width: 920px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      margin-top: 36px;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.12rem;
+      max-width: 780px;
+      margin-top: 16px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      background: var(--accent-soft);
+      border: 1px solid #b8ddd5;
+      border-radius: 999px;
+      color: #174a43;
+      font-size: 0.85rem;
+      font-weight: 650;
+      padding: 6px 11px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .callout {
+      background: var(--warning-soft);
+      border: 1px solid #f0d68a;
+      border-radius: 8px;
+      color: #503600;
+      padding: 16px;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      display: block;
+      overflow-x: auto;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      min-width: 190px;
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eef4f1;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .source-list li {
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    @media (max-width: 820px) {
+      main {
+        width: min(100% - 28px, 1120px);
+        padding-top: 28px;
+      }
+
+      .grid.two,
+      .grid.three {
+        grid-template-columns: 1fr;
+      }
+
+      th,
+      td {
+        min-width: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Competitor Research Analysis</div>
+      <h1>Dex: mature personal CRM benchmark for Wuslah</h1>
+      <p class="subtitle">
+        Dex is a polished personal relationship manager with deep contact sync, LinkedIn workflows, reminders, timeline context, AI assistance, and a subscription business. For Wuslah, it is both a feature benchmark and a warning: broad integrations create power, but they can also make the product feel more like infrastructure than a warm memory companion.
+      </p>
+      <div class="meta">
+        <span class="pill">Company: Dex / Dana HQ Inc.</span>
+        <span class="pill">Website: getdex.com</span>
+        <span class="pill">Report date: May 31, 2026</span>
+        <span class="pill">Context: Wuslah docs reviewed</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Executive Readout</h2>
+      <div class="grid three">
+        <article class="card">
+          <strong>What Dex does</strong>
+          <p>Dex centralizes personal and professional relationships across LinkedIn, email, calendar, mobile, browser, desktop, messaging, and contact sources. It helps users remember context, keep relationships warm, and reduce manual data entry.</p>
+        </article>
+        <article class="card">
+          <strong>Growth signals</strong>
+          <p>Dex claims 30,000+ users on its pricing page, has Product Hunt history back to 2019, appears in YC S19, and has an SEC Form C-AR showing revenue growth from 2021 to 2022.</p>
+        </article>
+        <article class="card">
+          <strong>Wuslah implication</strong>
+          <p>Do not try to match Dex integration-for-integration at launch. Wuslah should win with a narrower student and early-career memory loop: capture a person, remember the story, follow up thoughtfully.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Company Snapshot</h2>
+      <table>
+        <tr>
+          <th>Dimension</th>
+          <th>Findings</th>
+          <th>Sources</th>
+        </tr>
+        <tr>
+          <td>Legal/company identity</td>
+          <td>Dana HQ Inc., known as Dex. SEC Form C-AR lists Dana HQ Inc. as a Delaware corporation organized April 30, 2019, with Kevin Sun signing as CEO and director.</td>
+          <td><a href="https://www.sec.gov/Archives/edgar/data/1900769/000190076923000002/dexformc-ar.pdf">SEC Form C-AR</a></td>
+        </tr>
+        <tr>
+          <td>Positioning</td>
+          <td>Dex positions itself as “one place for your relationships,” explicitly emphasizing thoughtfulness, memory, and relationship context instead of heavy sales CRM pipelines.</td>
+          <td><a href="https://getdex.com/">Dex homepage</a>, <a href="https://www.producthunt.com/products/dex">Product Hunt</a></td>
+        </tr>
+        <tr>
+          <td>Primary users</td>
+          <td>Relationship-heavy professionals: founders, investors, MBA students, job seekers, creators, executives, and people who actively network across online and offline contexts.</td>
+          <td><a href="https://getdex.com/">Dex homepage</a>, <a href="https://getdex.com/pricing/">Dex pricing</a></td>
+        </tr>
+        <tr>
+          <td>Business model</td>
+          <td>Subscription-supported. Dex says privacy is a top priority, that it is supported by subscriptions rather than ads, and that it does not sell user data to third parties.</td>
+          <td><a href="https://getdex.com/">Dex homepage</a></td>
+        </tr>
+        <tr>
+          <td>Pricing</td>
+          <td>Pricing page advertises a 7-day free trial. Search-captured pricing shows Premium at $12/month and Professional at $20/month, with Professional adding higher LinkedIn sync limits, mail merge, multiple email accounts, API/Zapier access, and priority support.</td>
+          <td><a href="https://getdex.com/pricing/">Dex pricing</a></td>
+        </tr>
+        <tr>
+          <td>Financial history</td>
+          <td>SEC Form C-AR showed 2022 revenue/sales of $224,802 versus $59,514 in 2021, and 2 employees at the time of filing. This is historical, not a current revenue estimate.</td>
+          <td><a href="https://www.sec.gov/Archives/edgar/data/1900769/000190076923000002/dexformc-ar.pdf">SEC Form C-AR</a></td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Product: What Dex Actually Does</h2>
+      <div class="grid two">
+        <article class="card">
+          <strong>Relationship database</strong>
+          <ul>
+            <li>Stores names, relationship details, notes, important dates, family details, education/work history, gift ideas, and event history.</li>
+            <li>Supports groups, tags/custom fields, reminders, relationship timelines, and map view.</li>
+            <li>Frames the product as a replacement for spreadsheets, Airtable, Notion, HubSpot, Pipedrive, and scattered contacts.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <strong>Automatic context and sync</strong>
+          <ul>
+            <li>Connects to LinkedIn and other sources, and claims to automatically keep job titles up to date.</li>
+            <li>Browser extension integrates with LinkedIn, Facebook, and Gmail.</li>
+            <li>Navigation and pricing references Gmail, Outlook, Google Calendar, iMessage utility, two-way contact sync, Superhuman, Facebook, Instagram, WhatsApp, Zapier, and X.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <strong>Follow-up workflows</strong>
+          <ul>
+            <li>Personal CRM reminder loops: keep-in-touch cadence, reminders, and suggestions so contacts do not slip away.</li>
+            <li>Professional plan adds mail merge, multiple email accounts, API/Zapier access, and priority support.</li>
+            <li>Changelog and public docs indicate continued work on AI, sync, messaging, and meeting prep workflows.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <strong>Platforms</strong>
+          <ul>
+            <li>Web, mobile apps, desktop app, and browser extension.</li>
+            <li>Product Hunt lists App Store and Play Store availability.</li>
+            <li>Chrome extension appears important to LinkedIn/social capture workflows, which gives Dex power but creates platform dependency.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="muted">Key sources: <a href="https://getdex.com/">Dex homepage</a>, <a href="https://getdex.com/pricing/">Dex pricing</a>, <a href="https://getdex.com/guides/finding-the-right-personal-crm/">Dex personal CRM guide</a>, <a href="https://getdex.com/docs/changelog/changelog">Dex changelog</a>.</p>
+    </section>
+
+    <section>
+      <h2>Growth And Traction Signals</h2>
+      <table>
+        <tr>
+          <th>Signal</th>
+          <th>What It Suggests</th>
+          <th>Reliability</th>
+        </tr>
+        <tr>
+          <td>30,000+ users</td>
+          <td>Dex has reached meaningful niche adoption in the personal CRM category. This validates demand for individual relationship management outside sales CRM.</td>
+          <td>Official marketing claim from <a href="https://getdex.com/pricing/">Dex pricing</a>.</td>
+        </tr>
+        <tr>
+          <td>Revenue growth in SEC filing</td>
+          <td>Historical revenue increased from $59,514 in 2021 to $224,802 in 2022. This suggests early subscription traction before the current product maturity.</td>
+          <td>Official SEC Form C-AR, but dated April 6, 2023.</td>
+        </tr>
+        <tr>
+          <td>YC S19 and Product Hunt history</td>
+          <td>Dex has been in-market for years, giving it time to accumulate integrations, workflows, reviews, and SEO presence.</td>
+          <td><a href="https://www.producthunt.com/products/dex">Product Hunt</a> lists launch year 2019 and YC.</td>
+        </tr>
+        <tr>
+          <td>Multiple launches and changelog velocity</td>
+          <td>Dex is still shipping, including messaging sync, AI features, mobile improvements, and extension workflows.</td>
+          <td><a href="https://www.producthunt.com/products/dex">Product Hunt</a> and <a href="https://getdex.com/docs/changelog/changelog">Dex changelog</a>.</td>
+        </tr>
+      </table>
+      <div class="callout">
+        <strong>Interpretation:</strong> Dex is not just a landing-page competitor. It has years of product depth and enough adoption to define user expectations around personal CRM. Wuslah should compete through focus and emotional resonance first, then expand into integration depth.
+      </div>
+    </section>
+
+    <section>
+      <h2>Competitive Landscape</h2>
+      <table>
+        <tr>
+          <th>Competitor</th>
+          <th>What They Do</th>
+          <th>Growth / Pricing Signals</th>
+          <th>Relevance To Wuslah</th>
+        </tr>
+        <tr>
+          <td>Dex</td>
+          <td>Personal CRM with LinkedIn/email/calendar/social/messaging sync, notes, reminders, groups, map, extension, mobile, desktop, and AI-assisted workflows.</td>
+          <td>30,000+ users claimed; Premium around $12/month; Professional around $20/month; SEC filing shows 2022 revenue of $224,802.</td>
+          <td>Most direct benchmark for professional relationship memory and follow-up.</td>
+        </tr>
+        <tr>
+          <td>Clay.earth</td>
+          <td>Premium personal relationship manager with contact enrichment, life updates, reconnect prompts, search, groups, and broad imports across email, calendar, social, and messaging.</td>
+          <td>Public pricing references free up to 1,000 contacts, Pro, Team, and Enterprise tiers; TechCrunch reported Automattic acquired Clay in June 2025 after Clay raised over $9M.</td>
+          <td>Shows the ceiling for ambient relationship intelligence. Wuslah should not start by matching this data layer.</td>
+        </tr>
+        <tr>
+          <td>Monica</td>
+          <td>Open-source personal CRM for loved ones, social interactions, reminders, activities, family details, gifts, tasks, and private personal context.</td>
+          <td>Site reports 44,123 users, 340,273 contacts, 28,321 activities, and 89,918 reminders; hosted plan is $9/month or $90/year, self-hosting is free.</td>
+          <td>Closest emotional framing to Wuslah. Strong model for warmth, trust, and memory-first language.</td>
+        </tr>
+        <tr>
+          <td>folk</td>
+          <td>Team-oriented relationship CRM for startups, agencies, sales, partnerships, and recruiting. Includes pipeline, email campaigns, enrichment, AI assistants, LinkedIn extension, WhatsApp/calendar/email sync, and integrations.</td>
+          <td>Standard $24/member/month annually; Premium $48/member/month annually; Custom from $80/member/month annually.</td>
+          <td>Relevant to Wuslah’s future enterprise tier, but too team/sales-heavy for the Phase 1 student and young-professional wedge.</td>
+        </tr>
+        <tr>
+          <td>Clay.com</td>
+          <td>GTM enrichment and workflow automation platform with AI research, enrichment waterfalls, CRM sync, webhooks, data warehouse, SSO/RBAC, and outbound workflows.</td>
+          <td>Free plan plus Launch and Growth plans in the hundreds per month.</td>
+          <td>Relevant to Wuslah’s future profile intelligence and enterprise enrichment, not direct early competition.</td>
+        </tr>
+        <tr>
+          <td>DIY tools: Notion, Airtable, Sheets</td>
+          <td>Flexible contact trackers built manually by users. Cheap, customizable, and common among students/founders.</td>
+          <td>Low direct cost, but high maintenance cost. Dex explicitly positions itself as replacing manual spreadsheets and databases.</td>
+          <td>Likely biggest early substitute for Wuslah. The first-run experience must beat a spreadsheet immediately.</td>
+        </tr>
+      </table>
+      <p class="muted">Sources: <a href="https://getdex.com/pricing/">Dex pricing</a>, <a href="https://www.monicahq.com/">Monica</a>, <a href="https://www.monicahq.com/pricing">Monica pricing</a>, <a href="https://www.folk.app/pricing">folk pricing</a>, <a href="https://www.clay.com/pricing">Clay.com pricing</a>, <a href="https://techcrunch.com/2025/06/12/automattic-acquires-relationship-manager-clay-to-add-an-identity-layer-to-online-tools/">TechCrunch on Clay.earth acquisition</a>.</p>
+    </section>
+
+    <section>
+      <h2>Dex Versus Wuslah</h2>
+      <div class="grid two">
+        <article class="card">
+          <strong>Where Dex is ahead</strong>
+          <ul>
+            <li>Years of integration work across LinkedIn, email, calendar, mobile, browser, messaging, and social networks.</li>
+            <li>Existing paid packaging with clear Premium and Professional expansion.</li>
+            <li>Multi-platform availability across web, mobile, desktop, and extension.</li>
+            <li>Clear professional use cases for founders, investors, MBA students, job seekers, and creators.</li>
+            <li>Product depth around sync, reminders, contact history, map view, enrichment, and AI.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <strong>Where Wuslah can win</strong>
+          <ul>
+            <li>Own a narrower emotional wedge: students and young professionals who want to remember people from coffee chats, clubs, classes, internships, events, and introductions.</li>
+            <li>Use warmer language than “CRM”: memory, care, context, thoughtfulness, and being a better friend or colleague.</li>
+            <li>Make the first two minutes magical: add a person, capture how you met, store one memory note, set one follow-up, and get one suggested talking point.</li>
+            <li>Avoid early complexity from enterprise, enrichment, and broad sync. Ship the memory loop before the integration platform.</li>
+            <li>Make AI feel like memory assistance, not sales automation.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pricing Implications</h2>
+      <p>Wuslah’s planned Premium tier at $14/month or $99/year sits above Monica’s hosted $9/month and slightly above Dex’s search-captured Premium price of $12/month. That can work only if Wuslah’s early value is sharper than “store contacts.” The differentiator should be an AI-assisted memory and follow-up loop that feels purpose-built for students and early-career professionals.</p>
+      <div class="grid three">
+        <article class="card">
+          <strong>Free tier risk</strong>
+          <p>A 10-contact cap mirrors Monica, but Dex and Clay-style products can support larger imported networks. Wuslah’s free tier must create an emotional aha moment before the cap feels restrictive.</p>
+        </article>
+        <article class="card">
+          <strong>Premium justification</strong>
+          <p>Unlimited contacts alone is not enough. Bundle weekly reconnect digest, birthday and follow-up reminders, AI memory assistant, AI talking points, and full notes search.</p>
+        </article>
+        <article class="card">
+          <strong>Pro caution</strong>
+          <p>Speech-to-log, public profile intelligence, and auto outreach are powerful but trust-sensitive. Keep user review and source labeling central.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Product Recommendations</h2>
+      <ol>
+        <li><strong>Build Phase 1 around memory, not database management.</strong> Contact CRUD matters, but the launch loop should be: “I met someone, I do not want to forget them, remind me how to follow up.”</li>
+        <li><strong>Do not lead with LinkedIn sync yet.</strong> Dex already has the integration advantage. Wuslah should first prove manual capture can be fast, warm, and useful.</li>
+        <li><strong>Add structured “how we met” and “next conversation” fields early.</strong> These are stronger for Wuslah’s wedge than generic CRM fields.</li>
+        <li><strong>Make reminders opinionated.</strong> Offer suggested follow-up dates based on relationship type: coffee chat, event intro, recruiter, mentor, classmate, founder, investor, friend.</li>
+        <li><strong>Use AI narrowly.</strong> Prioritize “What should I ask them next?” and “What do I remember about them?” before profile enrichment or auto outreach.</li>
+        <li><strong>Keep enterprise language out of the core UI.</strong> The docs already warn against CRM/pipeline language. Dex validates that even power users want a lighter relationship story.</li>
+        <li><strong>Use campus and early-career GTM.</strong> Dex’s testimonials skew toward executives, investors, founders, and MBA users. Wuslah can own networking anxiety earlier in the career arc.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Feature Benchmark</h2>
+      <table>
+        <tr>
+          <th>Capability</th>
+          <th>Dex</th>
+          <th>Wuslah Planned</th>
+          <th>Recommendation</th>
+        </tr>
+        <tr>
+          <td>Contact capture</td>
+          <td>Imports and sync from LinkedIn, email, calendar, phone/social, plus extension.</td>
+          <td>Manual Phase 1 contact cards with notes, tags, search.</td>
+          <td>Start manual but make capture much faster and more human than a form.</td>
+        </tr>
+        <tr>
+          <td>Relationship memory</td>
+          <td>Notes, history, important dates, family, work, education, event history.</td>
+          <td>Memory notes, interaction logs, birthdays, AI memory assistant.</td>
+          <td>This is Wuslah’s natural center. Make it the main navigation and dashboard story.</td>
+        </tr>
+        <tr>
+          <td>Reminders</td>
+          <td>Keep-in-touch reminders and cadence management.</td>
+          <td>Free one reminder/month; Premium unlimited reminders, birthday alerts, weekly digest.</td>
+          <td>Ship reminders earlier and with relationship-type suggestions.</td>
+        </tr>
+        <tr>
+          <td>AI</td>
+          <td>AI-assisted summaries, prompts, cleanup, auto-tagging, messaging assistance, pre-meeting context.</td>
+          <td>Premium AI memory assistant and talking points; Pro speech-to-log and profile intelligence.</td>
+          <td>Use AI as a memory companion first. Avoid sounding like outbound sales automation.</td>
+        </tr>
+        <tr>
+          <td>Integrations</td>
+          <td>Strong moat: LinkedIn, Gmail, Outlook, Calendar, WhatsApp, iMessage utility, Facebook, Instagram, X, Zapier, API, mobile/desktop/extension.</td>
+          <td>Later Gmail/iMessage outreach, public profile intelligence, email alerts.</td>
+          <td>Do not overbuild integrations before the core loop works. Add Google Calendar/Gmail only when tied to meeting prep and reminders.</td>
+        </tr>
+        <tr>
+          <td>Team/enterprise</td>
+          <td>Professional plan has API/Zapier; public positioning is still individual-first.</td>
+          <td>Future enterprise workspaces, shared contact pools, RBAC, SSO, API, governance.</td>
+          <td>Delay enterprise until personal usage proves retention. Enterprise can distort the warm positioning.</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Open Questions For Wuslah</h2>
+      <ul>
+        <li>Should Wuslah keep the 10-contact free cap, or allow more contacts but gate AI/reminders? Dex and Clay-style products make large network import feel expected.</li>
+        <li>Is the first wedge students only, or students plus young professionals? The copy, onboarding examples, and reminder presets should choose one clear center.</li>
+        <li>Should birthday reminders be included in Free? They are emotionally powerful and may create retention even before Premium.</li>
+        <li>How much public enrichment is acceptable before users feel watched instead of helped?</li>
+        <li>What is Wuslah’s first integration: Google Calendar, Gmail, LinkedIn import, or mobile contacts? Dex suggests all matter eventually, but the first one should reinforce the memory loop.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sources</h2>
+      <ul class="source-list">
+        <li><a href="https://getdex.com/">Dex homepage</a></li>
+        <li><a href="https://getdex.com/pricing/">Dex pricing</a></li>
+        <li><a href="https://getdex.com/guides/finding-the-right-personal-crm/">Dex guide to finding the right personal CRM</a></li>
+        <li><a href="https://getdex.com/docs/changelog/changelog">Dex changelog</a></li>
+        <li><a href="https://www.producthunt.com/products/dex">Dex on Product Hunt</a></li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1900769/000190076923000002/dexformc-ar.pdf">Dana HQ / Dex SEC Form C-AR</a></li>
+        <li><a href="https://www.monicahq.com/">Monica homepage</a></li>
+        <li><a href="https://www.monicahq.com/pricing">Monica pricing</a></li>
+        <li><a href="https://www.folk.app/pricing">folk pricing</a></li>
+        <li><a href="https://www.clay.com/pricing">Clay.com pricing</a></li>
+        <li><a href="https://techcrunch.com/2025/06/12/automattic-acquires-relationship-manager-clay-to-add-an-identity-layer-to-online-tools/">TechCrunch: Automattic acquires Clay.earth</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
